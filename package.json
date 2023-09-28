@@ -3,12 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+     "deploy": "npm run build && gh-pages -d build",
+     "predeploy": "npm run build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "transform-svg": "svgr --config-file svgr.config.js --out-dir ./src/icons --ignore-existing ./public/iconsSvg"
   },
+  "homepage": "https://Tania-del.github.io/meme-generator",
+
   "dependencies": {
     "@types/node": "20.6.5",
     "@types/react": "18.2.22",
@@ -25,6 +29,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
-    "@svgr/cli": "^8.1.0"
+    "@svgr/cli": "^8.1.0",
+    "gh-pages": "^6.0.0"
   }
 }
